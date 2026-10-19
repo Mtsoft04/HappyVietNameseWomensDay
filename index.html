@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chúc mừng 20/10 – Ngày Phụ nữ Việt Nam</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--text:#fff;--glass:rgba(255,255,255,.18);--glass-b:rgba(255,255,255,.55);--gold:#ffe066;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--glass:rgba(0,0,0,.22)}}
+:root[data-theme="dark"]{--glass:rgba(0,0,0,.22)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;color:var(--text);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:#c2185b;background:linear-gradient(125deg,#ff0080,#ff6a3d,#ffb300,#e91e63,#8e24ff,#ff0080);
+  background-size:500% 500%;animation:bg 16s ease infinite;overflow-x:hidden}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0;animation:float 12s ease-in-out infinite}
+.b1{width:420px;height:420px;background:#ffe066;top:-120px;left:-100px}
+.b2{width:480px;height:480px;background:#00e5ff;bottom:-160px;right:-120px;animation-delay:-4s}
+.b3{width:360px;height:360px;background:#ff4d94;top:40%;left:55%;animation-delay:-8s}
+@keyframes float{50%{transform:translate(50px,-60px) scale(1.15)}}
+#petals,#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+#petals{z-index:1;overflow:hidden}#confetti{z-index:9}
+.petal{position:absolute;top:-10%;animation:fall linear infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+@keyframes fall{to{transform:translateY(115vh) rotate(540deg)}}
+.ribbon{position:relative;z-index:2;overflow:hidden;white-space:nowrap;background:linear-gradient(90deg,#ffe066,#ff9ecb,#ffe066);
+  color:#9b0050;font-weight:800;padding:9px 0;box-shadow:0 4px 18px rgba(80,0,60,.35)}
+.ribbon span{display:inline-block;padding-left:100%;animation:marq 22s linear infinite}
+@keyframes marq{to{transform:translateX(-100%)}}
+main{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:34px 18px 56px;text-align:center}
+.big{font-size:clamp(6.5rem,30vw,14rem);font-weight:800;line-height:.95;margin:0;
+  background:linear-gradient(180deg,#fff 10%,#ffe066 55%,#ff9a3c);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 22px rgba(255,255,255,.6)) drop-shadow(0 10px 18px rgba(90,0,50,.5));animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.05) rotate(-1deg)}}
+h1{font-family:Pacifico,cursive;font-weight:400;font-size:clamp(1.8rem,6.5vw,3.4rem);margin:.1em 0 .25em;text-shadow:0 0 18px rgba(255,255,255,.6),0 4px 16px rgba(90,0,50,.5)}
+.flowers{font-size:2rem;letter-spacing:.35em;animation:sway 3s ease-in-out infinite;margin-bottom:6px}
+@keyframes sway{50%{transform:translateY(-9px)}}
+.sub{font-size:clamp(1rem,2.6vw,1.2rem);max-width:560px;margin:0 auto 34px}
+h2{font-family:Pacifico,cursive;font-weight:400;font-size:clamp(1.5rem,5vw,2.4rem);margin:0 0 22px;color:var(--gold);text-shadow:0 4px 16px rgba(90,0,50,.5)}
+.names{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;text-align:center}
+.nc{--h:330;position:relative;overflow:hidden;border-radius:26px;padding:62px 20px 24px;cursor:pointer;
+  background:linear-gradient(145deg,hsl(var(--h) 95% 62%),hsl(calc(var(--h) + 45) 95% 52%));
+  border:2px solid var(--glass-b);box-shadow:0 14px 34px rgba(60,0,50,.4),inset 0 0 30px rgba(255,255,255,.25);
+  opacity:0;transform:translateY(30px) scale(.94);animation:in .7s cubic-bezier(.2,.9,.3,1.2) forwards;transition:transform .25s,box-shadow .25s}
+@keyframes in{to{opacity:1;transform:none}}
+.nc:hover{transform:translateY(-8px) rotate(-1.5deg) scale(1.03);box-shadow:0 22px 46px rgba(60,0,50,.55),0 0 28px hsl(var(--h) 100% 70%)}
+.nc::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 4s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes shine{0%,60%{left:-80%}100%{left:140%}}
+.av{position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:76px;height:76px;border-radius:0 0 50% 50%/0 0 60% 60%;
+  background:rgba(255,255,255,.9);display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-size:2.3rem;box-shadow:0 6px 14px rgba(0,0,0,.2);animation:bob 2.6s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes bob{50%{transform:translateX(-50%) translateY(5px)}}
+.nc b{display:block;font-family:Pacifico,cursive;font-weight:400;font-size:1.65rem;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nc p{margin:0;line-height:1.6;font-weight:600;font-size:1.02rem;text-shadow:0 1px 5px rgba(0,0,0,.25)}
+.nc i{position:absolute;bottom:8px;right:14px;font-style:normal;opacity:.55;font-size:1.1rem}
+.boss{display:flex;justify-content:center;margin-bottom:26px}
+.nc.vic{max-width:560px;width:100%;padding:92px 26px 30px;background:linear-gradient(145deg,#ffd700,#ff9d00 45%,#ff2d87);border:3px solid #fff7c2;animation:in .8s cubic-bezier(.2,.9,.3,1.2) forwards,glow 2.4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 14px 40px rgba(60,0,50,.45),0 0 46px 8px rgba(255,224,102,.85)}}
+.crown{position:absolute;top:6px;left:50%;transform:translateX(-50%);font-size:4.2rem;line-height:1;filter:drop-shadow(0 4px 10px rgba(120,60,0,.55));animation:crown 2.2s ease-in-out infinite}
+@keyframes crown{50%{transform:translateX(-50%) translateY(6px) rotate(-6deg) scale(1.08)}}
+.nc.vic b{font-size:2.2rem}
+.nc.vic p{font-size:1.12rem}
+footer{margin-top:44px;font-size:1.05rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.nc{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div id="petals"></div>
+<canvas id="confetti"></canvas>
+<div class="ribbon"><span>✿ CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM 20/10 ✿ Luôn xinh đẹp – Luôn hạnh phúc – Luôn được yêu thương ✿ CHÚC MỪNG 20/10 ✿</span></div>
+<main>
+  <div class="big">20/10</div>
+  <h1>Chúc mừng Ngày Phụ nữ Việt Nam</h1>
+  <div class="flowers">🌹 🌷 🌸 🌺 🌻</div>
+  <p class="sub">Gửi đến những người phụ nữ tuyệt vời – những người thắp lên niềm vui, yêu thương và sức mạnh mỗi ngày.</p>
+  <h2>Lời chúc riêng dành tặng 💌</h2>
+  <div class="boss" id="boss"></div>
+  <div class="names" id="names"></div>
+  <footer>Với tất cả tình yêu và sự trân trọng 💗</footer>
+</main>
+<script>
+(function(){
+  var ppl=[
+    ["Sophia","🦉","Chúc Sophia thông minh, sâu sắc và luôn toả sáng như chính cái tên của mình!"],
+    ["Alice","🐇","Chúc Alice luôn tò mò, mơ mộng và bước vào những điều kỳ diệu như xứ sở thần tiên!"],
+    ["Ann","🌿","Chúc Ann bình yên, dịu dàng và luôn được bao quanh bởi những người thương yêu!"],
+    ["Anna","😊","Chúc Anna rạng rỡ nụ cười, ngày nào cũng là một ngày đáng nhớ!"],
+    ["Shark Dung","🦈","Chúc Shark Dung mạnh mẽ như cá mập, bứt phá mọi thử thách và thành công rực rỡ!"],
+    ["Trần Thuỳ(Lê)","🌺","Chúc Thuỳ luôn duyên dáng, dịu dàng mà kiên cường, mọi dự định đều thuận lợi!"],
+    ["Thu","🍂","Chúc Thu ấm áp, nhẹ nhàng như nắng thu, hạnh phúc đong đầy!"],
+    ["Fiona","👑","Chúc Fiona xinh đẹp, tự tin và luôn là nàng công chúa của riêng mình!"],
+    ["Grace","✨","Chúc Grace thanh lịch, duyên dáng và gặp thật nhiều may mắn!"],
+    ["Abby","⚡","Chúc Abby vui vẻ, năng động và tràn đầy năng lượng tích cực mỗi ngày!"],
+    ["Summer","☀️","Chúc Summer rực rỡ như mùa hè, luôn ngập nắng, ngập niềm vui!"],
+    ["Hạnh","🌷","Chúc Hạnh đúng như tên gọi: hạnh phúc, bình an và viên mãn!"],
+    ["Nana","🍑","Chúc Nana đáng yêu, ngọt ngào và mãi được cưng chiều!"],
+    ["Jane","🌟","Chúc Jane tự do, giỏi giang và chinh phục mọi ước mơ!"],
+    ["Lena","🦋","Chúc Lena dịu dàng, thanh thoát và luôn toả sáng theo cách rất riêng của mình!"]
+  ];
+  var box=document.getElementById('names');
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+  ppl.forEach(function(x,i){
+    var d=el('div','nc');
+    d.style.setProperty('--h',(i*26)%360);
+    d.style.setProperty('--d',(i*0.3)+'s');
+    d.style.animationDelay=(i*0.09)+'s';
+    var av=el('div','av',x[1]);
+    d.appendChild(av);d.appendChild(el('b','',x[0]));d.appendChild(el('p','',x[2]));d.appendChild(el('i','','💖'));
+    d.addEventListener('click',function(e){burst(e.clientX,e.clientY,70)});
+    box.appendChild(d);
+  });
+
+  var vic=el('div','nc vic');
+  vic.appendChild(el('div','crown','👑'));
+  vic.appendChild(el('b','','Sếp Vic'));
+  vic.appendChild(el('p','','Kính chúc Sếp Vic luôn khoẻ mạnh, trẻ trung và rạng rỡ như một nữ hoàng; công việc hanh thông, đội ngũ luôn gắn kết và mọi dự định đều thành công vượt mong đợi!'));
+  vic.appendChild(el('i','','💖'));
+  vic.style.setProperty('--d','0s');
+  vic.addEventListener('click',function(e){burst(e.clientX,e.clientY,110)});
+  document.getElementById('boss').appendChild(vic);
+
+  var p=document.getElementById('petals'),em=["🌸","🌷","🌹","🌺","💮","🌼","💗","✨"];
+  for(var k=0;k<30;k++){
+    var s=el('span','petal',em[k%em.length]);
+    s.style.left=Math.random()*100+'%';
+    s.style.fontSize=(16+Math.random()*26)+'px';
+    s.style.animationDuration=(7+Math.random()*9)+'s';
+    s.style.animationDelay=(-Math.random()*14)+'s';
+    s.style.opacity=.6+Math.random()*.4;
+    p.appendChild(s);
+  }
+
+  var cv=document.getElementById('confetti'),ctx=cv.getContext('2d'),parts=[],running=false;
+  function size(){cv.width=innerWidth;cv.height=innerHeight}
+  size();addEventListener('resize',size);
+  var cols=["#ff4d94","#ffe066","#fff","#ff9966","#c850c0","#6ee7ff","#7CFC00"];
+  function burst(x,y,n){
+    for(var j=0;j<n;j++){
+      var a=Math.random()*Math.PI*2,v=4+Math.random()*9;
+      parts.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-4,g:.22,r:3+Math.random()*5,c:cols[j%cols.length],l:90+Math.random()*60,rot:Math.random()*6});
+    }
+    if(!running){running=true;requestAnimationFrame(tick)}
+  }
+  function tick(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    parts=parts.filter(function(q){return q.l>0});
+    parts.forEach(function(q){
+      q.x+=q.vx;q.y+=q.vy;q.vy+=q.g;q.vx*=.99;q.l--;q.rot+=.2;
+      ctx.save();ctx.translate(q.x,q.y);ctx.rotate(q.rot);
+      ctx.globalAlpha=Math.min(1,q.l/40);ctx.fillStyle=q.c;ctx.fillRect(-q.r,-q.r/2,q.r*2,q.r);ctx.restore();
+    });
+    if(parts.length)requestAnimationFrame(tick);else running=false;
+  }
+  setTimeout(function(){
+    burst(innerWidth*.2,innerHeight*.45,90);
+    setTimeout(function(){burst(innerWidth*.8,innerHeight*.45,90)},250);
+    setTimeout(function(){burst(innerWidth*.5,innerHeight*.3,130)},500);
+  },600);
+  addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY,35)});
+})();
+</script>
+</body>
+</html>
